@@ -16,14 +16,15 @@ import Title from './Title';
 import Subtitle from './Subtitle';
 const Viewcard = ({style}) => {
   const [details, setDetails] = useState(null);
+  const api = 'https://newsapi.org/v2/top-headlines?country=IN&category=business&apiKey=';
+  const apiKey = 'd869bd7fb8a34ae4b2ed692c88a1dd4c';
   const FethchDetails = async () => {
     try {
-      const {data} = await Axios.get(
-        'https://newsapi.org/v2/top-headlines?country=IN&category=business&apiKey=d869bd7fb8a34ae4b2ed692c88a1dd4c',
-      );
+      const {data} = await Axios.get(api+apiKey);
       const details = data.object.articles.sources;
     } catch (error) {
       console.log(error);
+      alert("Some error occured");
     }
   };
   return (
