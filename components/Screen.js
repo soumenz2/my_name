@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 
 import Searchbar from './searchbar';
+
+
 // import Viewcard from './Viewcard';
 import Featurednews from './Featurenews';
 
