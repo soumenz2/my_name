@@ -14,6 +14,7 @@ import {
 import Axios from 'react';
 import Title from './Title';
 import Subtitle from './Subtitle';
+import image from '../Assets/image.jpg';
 const Viewcard = ({style}) => {
   const [details, setDetails] = useState(null);
   const api = 'https://newsapi.org/v2/top-headlines?country=IN&category=business&apiKey=';
@@ -29,7 +30,7 @@ const Viewcard = ({style}) => {
   };
   return (
     <View style={[styles.container, style]}>
-      <Image style={styles.tinyLogo} source={require('../Assets/image.jpg')} />
+      <Image style={styles.tinyLogo} source={image} />
       <View>
         <Title>
           {' '}
